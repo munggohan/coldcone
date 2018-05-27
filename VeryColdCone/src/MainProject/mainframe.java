@@ -868,20 +868,6 @@ public class mainframe extends javax.swing.JFrame {
             coffeeQuantity();
             chocoQuantity();
             
-                    this.cone = 0;
-                    this.cup = 0;
-                    this.cream = 0;
-                    this.additional = 0;
-                    this.plasticSpoon = 0;
-                    this.ice = 0;
-                    this.cup16oz = 0;
-                    this.coke = 0;
-                    this.domeLid = 0;
-                    this.juiceStraw = 0;
-                    this.tissue = 0;
-                    this.coffee = 0;
-                    this.choco = 0;
-                    this.number = 0;
         }
     }
     private void coneQuantity(){
