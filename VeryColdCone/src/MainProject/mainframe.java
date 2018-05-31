@@ -7,6 +7,12 @@ package MainProject;
 
 import java.awt.Color;
 import java.awt.Toolkit;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -779,6 +785,7 @@ public class mainframe extends javax.swing.JFrame {
         }
         quantityIngredients.clear();
         typeIngredients.clear();
+        print();
         orderTable();
         grandTotal();
         updateTableone();
@@ -1196,6 +1203,15 @@ public class mainframe extends javax.swing.JFrame {
             
                 conn.close();
         } catch (SQLException ex) {
+            Logger.getLogger(mainframe.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    private void print(){
+        try {
+            PrintWriter out = new PrintWriter("Test no 1.txt");
+            out.println("VERY VERY NICE");
+            out.close();
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(mainframe.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
